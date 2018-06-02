@@ -1,7 +1,7 @@
 const fs = require('fs'),
       cl = require('node-cl-log');
 /*
-  @description Is responsible for assembly of several *.sh files in one bandl in a certain order which is described in the file.
+  @description Is responsible for assembly of several *.html files in one bandl in a certain order which is described in the file.
   @param Takes all files from the transferred directory.
   @param The file (assembly) collects in transferred.
   @param Order of turn in which files from the first argument will gather in the file from the second argument.
