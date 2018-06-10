@@ -17,18 +17,6 @@ class BundleSh {
           pathSrcSh = this.pathSrcSh,
           pathBuildSh = this.pathBuildSh,
           filesListOrder = this.filesListOrder;
-
-
-          // cl.gre(pathSrcSh );
-          // cl.gre(pathBuildSh);
-          // cl.gre(filesListOrder);
-
-
-      // fs.readdir(pathSrcSh, function (err, items) {
-      //   cl.log(items);
-      // });
-
-
     fs.readdir('./data/', function (err, items) {
       // create new array with elements in the necessary order
       filesListOrder.forEach(el => {
