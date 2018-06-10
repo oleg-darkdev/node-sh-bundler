@@ -7,18 +7,29 @@ const fs = require('fs'),
   @param Order of turn in which files from the first argument will gather in the file from the second argument.
 */
 class BundleSh {
-  constructor(pathSrcSh, pathBuildSh, filesListOrder) {
-    this.pathSrcSh = pathSrcSh;
-    this.pathBuildSh = pathBuildSh;
-    this.filesListOrder = filesListOrder
+  constructor(arrayConfig) {
+    this.pathSrcSh = arrayConfig[0];
+    this.pathBuildSh = arrayConfig[1];
+    this.filesListOrder = arrayConfig[2];
   }
   genBundle() {
     const bundleShArr = [],
-      pathSrcSh = this.pathSrcSh,
-      pathBuildSh = this.pathBuildSh,
-      filesListOrder = this.filesListOrder;
+          pathSrcSh = this.pathSrcSh,
+          pathBuildSh = this.pathBuildSh,
+          filesListOrder = this.filesListOrder;
 
-    fs.readdir(pathSrcSh, function (err, items) {
+
+          // cl.gre(pathSrcSh );
+          // cl.gre(pathBuildSh);
+          // cl.gre(filesListOrder);
+
+
+      // fs.readdir(pathSrcSh, function (err, items) {
+      //   cl.log(items);
+      // });
+
+
+    fs.readdir('./data/', function (err, items) {
       // create new array with elements in the necessary order
       filesListOrder.forEach(el => {
         bundleShArr.push(items[items.indexOf(el)]);
@@ -40,11 +51,12 @@ class BundleSh {
               } else {
                 cl.red(`There was an error creating ${pathBuildSh}`);
               }
-            });
-          };
-        });
-      });
-    });
+            }); // end open
+          }; // end else
+        }); // end readfile
+      }); // bundleShArr
+    }); // end readdir
   };
 };
-export default BundleSh;
+
+module.exports = BundleSh;
