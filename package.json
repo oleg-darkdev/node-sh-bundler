@@ -1,6 +1,6 @@
 {
   "name": "node-sh-bundler",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "index.js",
   "scripts": {
     "valid:js": "gulp validation:js",
@@ -14,7 +14,7 @@
     "js:gulp": "gulp",
     "js": "rollup -c configs/rollup.config.js -w -m "
   },
-  "license": "MIT",
+  "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
