@@ -5,10 +5,6 @@ Before running tests for cli add rights the performing file - ex: chmod 755 inde
 Для написания коментариев для документации с помощью  вы можете воспользоваться информацией [отсюда](docs/jsDoc/guide/)
 
 
-
-const fs = require('fs'),
-      cl = require('node-cl-log');
-
 const BundleSh = require('./build/bundle');
 const newBundleConfig = [
   './data/',
