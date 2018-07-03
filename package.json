@@ -1,6 +1,6 @@
 {
   "name": "node-sh-bundler",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "index.js",
   "scripts": {
     "valid:js": "gulp validation:js",
