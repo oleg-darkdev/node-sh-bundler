@@ -1,6 +1,6 @@
 {
   "name": "node-sh-bundler",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "scripts": {
     "valid:js": "gulp validation:js",
@@ -16,6 +16,8 @@
   },
   "license": "CC BY-NC-SA 4.0",
   "devDependencies": {
+    "pkgfiles": "^2.3.2",
+    "pre-git": "^3.17.1",
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
@@ -44,5 +46,15 @@
     "rollup-stream": "^1.24.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
+  },
+	"config": {
+    "pre-git": {
+      "pre-push": [
+        "npm run size:files"
+      ]
+    }
+  },
+  "release": {
+    "analyzeCommits": "simple-commit-message"
   }
 }
