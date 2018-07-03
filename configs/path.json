@@ -1,0 +1,40 @@
+{
+   "src": {
+      "startFileJs": "index.js",
+      "endFileJs": "bundle.js",
+      "minificationEndFileJs": "bundle.min.js",
+      "pug": "src/pug/**/*.pug",
+      "js": "src/",
+      "scss": "src/styles/**/*.scss",
+      "data": "src/js/data"
+   },
+   "build": {
+      "html": "build/",
+      "js": "build/",
+      "minificationJs": "./",
+      "css": "build/styles/",
+      "data": "build/data"
+   },
+   "tests": {
+      "mocha": "build/tests/mocha/spec.js"
+   },
+   "validation": {
+      "html": "build/*.html",
+      "css": "build/styles/index.css",
+      "js": "build/**/**/*.js",
+      "jsFixedLinterOutput": "./index.js"
+   },
+   "watch": {
+      "pug": "src/pug/**/*.pug",
+      "js": "src/**/*.js",
+      "scss": "src/styles/**/*.scss"
+   },
+   "configs": {
+      "jsDoc": "./configs/jsDoc.json",
+      "babel": "./configs/babel.json"
+   },
+   "docs": {
+      "jsDoc": "build/docs/jsDoc/README.md"
+   }
+}
+
